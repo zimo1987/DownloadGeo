@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gxbdx.game2048.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="2048"
+                android:textColor="#FFFEFE"
+                android:textSize="36sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/gray_bg"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:textColor="#EFDFD2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:text="0"
+                    android:gravity="center"
+                    android:id="@+id/tvScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#FFFEFE"
+                android:text="菜单"
+                android:background="@drawable/brown_bg"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/gray_bg"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:textColor="#EFDFD2"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="历史最高成绩"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:text="0"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:textColor="#FFFEFE"
+                android:text="排行榜"
+                android:background="@drawable/brown_bg"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.gxbdx.game2048.GameView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></com.gxbdx.game2048.GameView>
+
+</LinearLayout>
